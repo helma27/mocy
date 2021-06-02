@@ -9,7 +9,7 @@ function SearchItem({ result, site, api }) {
 
     const res = await fetch(api + "api/v1/details/" + site + "?query=" + result.link);
     if (res.status !== 200) {
-      setResponse({ error: true, errorMessage: "Cannot connect to site" });
+      setResponse({ error: true, errorMessage: "Situsnya gak bisa dibuka mas :'(" });
     } else {
       const response = await res.json();
       setResponse({ ...response });
@@ -52,7 +52,7 @@ function SearchItem({ result, site, api }) {
               </div>
             ))}
             <a href={response.torrent.downloadLink} className="btn warning m-0 mt-1">
-              Download
+              Tarik mas~
             </a>
             <button onClick={copyToClipboard} className="btn primary m-0 ml-1 mt-1">
               Copy link

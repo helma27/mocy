@@ -18,7 +18,7 @@ function Search({ api }) {
       if (res.status !== 200) {
         setResponse({
           error: true,
-          errorMessage: "Cannot connect to site"
+          errorMessage: "Situsnya gak bisa dibuka mas :'("
         });
       } else {
         const response = await res.json();
@@ -36,27 +36,27 @@ function Search({ api }) {
         <Picker
           id="site"
           name="site"
-          label="Select site"
+          label="Pilih situsnya"
           value={site}
           onChange={setSite}
           options={[
+            { name: "RARBG", value: "rarbg" },
             { name: "1337x", value: "1337x" },
-            { name: "Limetorrents", value: "limetorrent" },
-            { name: "Piratebay", value: "piratebay" }
+            { name: "YTS", value: "yts" }
           ]}
           required
         />
         <Input
           id="term"
           name="term"
-          label="Search Term"
-          placeholder="The forgotten army, Flames..."
+          label="Kata koentji"
+          placeholder="Ariel dan luna maya 3gp..."
           value={term}
           onChange={setTerm}
           required
         />
         <button disabled={loading || !site} className={`btn primary${loading ? " loading" : ""}`} type="submit">
-          Search
+          Gas
         </button>
       </form>
       <div className="d-flex-column mv-1">

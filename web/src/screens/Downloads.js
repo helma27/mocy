@@ -15,7 +15,7 @@ function Downloads() {
     setAdding(true);
 
     if (link.indexOf("magnet:") !== 0) {
-      setAddingError("Link is not a magnet link");
+      setAddingError("Gimana sih mas, ini bukan MAGNET!");
     } else {
       setAddingError("");
       const resp = await fetch(`/api/v1/torrent/download?link=${link}`);
@@ -23,7 +23,7 @@ function Downloads() {
       if (resp.status === 200) {
         setLink("");
       } else {
-        setAddingError("An error occured");
+        setAddingError("Lah kok gak bisa");
       }
     }
 
@@ -38,7 +38,7 @@ function Downloads() {
         <Input
           id="link"
           name="link"
-          label="Magnet Link"
+          label="Magnet-nya dimari"
           placeholder="magnet:?xt=urn:btih:08ada5a7a6183aae1e09d831df6748d566095a10"
           value={link}
           onChange={setLink}
@@ -49,7 +49,7 @@ function Downloads() {
           Add
         </button>
       </form>
-      {error && <div className="text-danger mt-1">An error occured. Check your internet.</div>}
+      {error && <div className="text-danger mt-1">Lah gak bisa eh, coba kamu cek dulu Internetnya mas.</div>}
       {data && (
         <div className="d-flex-column mt-1">
           {data.torrents.map(torrent => (
