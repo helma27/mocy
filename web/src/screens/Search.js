@@ -40,9 +40,7 @@ function Search({ api }) {
           value={site}
           onChange={setSite}
           options={[
-            { name: "RARBG", value: "rarbg" },
             { name: "1337x", value: "1337x" },
-            { name: "YTS", value: "yts" }
           ]}
           required
         />
