@@ -33,7 +33,7 @@ server.get("/ping", (req, res) => res.send("pong"));
 
 server.get("/logs", (req, res) => res.sendFile("logs.txt", { root: __dirname }));
 
-server.use("/downloads", express.static("downloads"), serveIndex("downloads", { icons: true }));
+server.use("/mirror", express.static("downloads"), serveIndex("downloads", { icons: true }));
 
 server.use("/api/v1/drive/folder", async (req, res) => {
   const folderId = req.query.id;
