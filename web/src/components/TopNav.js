@@ -19,7 +19,7 @@ export default function TopNav({ nav }) {
               <i className="h2 m-0 d-flex align-items-center">
                 <ion-icon name="download-outline" />
               </i>
-              <span className="tablet-desktop-only ml-05">Donlot</span>
+              <span className="tablet-desktop-only ml-05">Download</span>
             </Link>
           </li>
           <li className={`cursor-pointer p-0 ph-1 height-100 d-flex align-items-center${nav === "drive" ? " border-bottom-1" : ""}`}>

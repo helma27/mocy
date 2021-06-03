@@ -32,13 +32,13 @@ function Downloads() {
 
   return (
     <>
-      <h1>Downloads</h1>
+      <h1>Unduhan</h1>
 
       <form onSubmit={add}>
         <Input
           id="link"
           name="link"
-          label="Magnet-nya dimari"
+          label="MAGNET Link"
           placeholder="magnet:?xt=urn:btih:08ada5a7a6183aae1e09d831df6748d566095a10"
           value={link}
           onChange={setLink}

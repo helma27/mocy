@@ -34,15 +34,15 @@ function DownloadItem({ torrent }) {
           <div>{torrent.status}</div>
         </div>
         <div className="d-flex space-between">
-          <div className="text-400">Size: </div>
+          <div className="text-400">Ukuran: </div>
           <div>{torrent.total}</div>
         </div>
         <div className="d-flex space-between">
-          <div className="text-400">Downloaded: </div>
+          <div className="text-400">Terunduh: </div>
           <div>{torrent.downloaded}</div>
         </div>
         <div className="d-flex space-between">
-          <div className="text-400">Speed: </div>
+          <div className="text-400">Kecepatan: </div>
           <div>{torrent.speed}</div>
         </div>
         {!torrent.done && (
@@ -52,7 +52,7 @@ function DownloadItem({ torrent }) {
         )}
         {torrent.done && (
           <a href={torrent.downloadLink} className="btn success">
-            Unduh mas
+            Unduh
           </a>
         )}
       </div>

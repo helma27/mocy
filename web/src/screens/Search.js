@@ -18,7 +18,7 @@ function Search({ api }) {
       if (res.status !== 200) {
         setResponse({
           error: true,
-          errorMessage: "Situsnya gak bisa dibuka mas :'("
+          errorMessage: "Situs tidak dapat diakses"
         });
       } else {
         const response = await res.json();
@@ -31,12 +31,12 @@ function Search({ api }) {
 
   return (
     <>
-      <h1>Search</h1>
+      <h1>Pencarian</h1>
       <form onSubmit={search}>
         <Picker
           id="site"
           name="site"
-          label="Pilih situsnya"
+          label="Pilih situs"
           value={site}
           onChange={setSite}
           options={[
@@ -47,8 +47,8 @@ function Search({ api }) {
         <Input
           id="term"
           name="term"
-          label="Kata koentji"
-          placeholder="Ariel dan luna maya 3gp..."
+          label="Kata kunci"
+          placeholder="MotoGP..."
           value={term}
           onChange={setTerm}
           required
