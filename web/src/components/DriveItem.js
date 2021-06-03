@@ -18,11 +18,12 @@ export default function DriveItem({ item: { id, name, modifiedTime, iconLink, mi
         <span>Modified: {modifiedTime}</span>
         {isFolder ? (
           <Link className="btn primary m-0 mt-1" to={`/drive/${id}`}>
-            Open folder
+            Buka Folder
           </Link>
         ) : (
-          <a className="btn primary m-0 mt-1" href={`/api/v1/drive/file/${name}?id=${id}`} download>
-            Download
+          //<a className="btn primary m-0 mt-1" href={`/api/v1/drive/file/${name}?id=${id}`} download>
+		  <a className="btn primary m-0 mt-1" href={`https://drive.helmajs.my.id/:1/${name}/`} download>
+            Unduh
           </a>
         )}
       </div>
