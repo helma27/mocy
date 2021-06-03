@@ -24,9 +24,6 @@ export default function DriveItem({ item: { id, name, modifiedTime, iconLink, mi
           <a className="btn primary m-0 mt-1" href={`/api/v1/drive/file/${name}?id=${id}`} download>
             Unduh
           </a>
-		  <a className="btn sucess m-0 mt-1" href={`https://drive.helmajs.my.id/1:/`} download>
-            Drive Public
-          </a>
         )}
       </div>
     </div>
