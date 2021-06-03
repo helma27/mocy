@@ -31,12 +31,12 @@ export default function TopNav({ nav }) {
             </Link>
           </li>
 		  <li className={`cursor-pointer p-0 ph-1 height-100 d-flex align-items-center${nav === "drivepublic" ? " border-bottom-1" : ""}`}>
-            <Link to="https://drive.helmajs.my.id/1:/" className="height-100 d-flex align-items-center">
+            <a href="https://drive.helmajs.my.id/1:/" className="height-100 d-flex align-items-center">
               <i className="h2 m-0 d-flex align-items-center">
                 <ion-icon name="cloud-done" />
               </i>
               <span className="tablet-desktop-only ml-05">Drive Publik</span>
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
